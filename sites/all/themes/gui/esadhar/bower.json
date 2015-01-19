@@ -1,0 +1,20 @@
+{
+  "name": "esadhar",
+  "dependencies": {
+    "skrollr": "~0.6.29",
+    "foundation": "~5.5.0"
+  },
+  "version": "7.x-0.1",
+  "authors": [
+    "Bachir Soussi Chiadmi <bachir@g-u-i.me>"
+  ],
+  "license": "MIT",
+  "homepage": "esadhar",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

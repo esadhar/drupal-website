@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Actualitees feature.
+ */
+
+include_once 'actualitees.features.inc';
