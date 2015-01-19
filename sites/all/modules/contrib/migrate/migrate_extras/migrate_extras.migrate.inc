@@ -12,7 +12,6 @@ function migrate_extras_migrate_api() {
       'MigrateExtrasUserFlagHandler',
     ),
     'field handlers' => array(
-      'MigrateAddressFieldHandler',
       'MigrateCckPhoneHandler',
       'MigrateGeoFieldHandler',
       'MigrateIntervalFieldHandler',
