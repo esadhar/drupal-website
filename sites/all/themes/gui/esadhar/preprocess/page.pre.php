@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * @file template.preprocess-page.inc
@@ -35,3 +35,7 @@ if (theme_get_setting('layout_enable_settings') == 'on')
 
 $vars['primary_local_tasks'] = menu_primary_local_tasks();
 $vars['secondary_local_tasks'] = menu_secondary_local_tasks();
+
+
+if($vars['is_front'])
+  $vars['title'] = false;

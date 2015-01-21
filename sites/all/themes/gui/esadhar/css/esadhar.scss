@@ -116,9 +116,12 @@ body{
     padding:0;
   }
   li{
+    list-style:none;
     position:relative;
     margin:0; padding:0;
     line-height:1;
+    display:inline-block;
+    vertical-align: top;
     ul{
       li{
         margin:0em;
@@ -132,15 +135,14 @@ body{
     display:block;
   }
 
-  #top-content &{
+  #content &{
     @media #{$large-up} {
       ul{
         li{
-          display:inline-block;
-          vertical-align: top;
           ul{
             position:absolute;
             top:0; left:100%;
+            margin:0 0 0 0.15em;
             z-index:2;
             display:none;
             li{
@@ -158,18 +160,20 @@ body{
 
     a{
       font-size:2em;
-      padding:0.8em 0.8em;
+      padding:0.6em 0.6em;
       line-height:1.2em;
       max-width:9em;
+      margin:0 0 0.15em 0;
     }
   }
 
   #leftsidebar &{
      a{
       font-size:1em;
-      padding:0.5em 0.5em;
-      line-height:1.2em;
+      padding:0.3em 0.3em;
+      line-height:1.1em;
       max-width:9em;
+      margin:0 0 0.15em 0;
     }
   }
 }
@@ -180,8 +184,7 @@ body{
     font-size:1.8em;
     padding:1em;
   }
-
-  .content{
+  #block-system-main{
     background-color:#fff;
     padding:1em;
     h3{
