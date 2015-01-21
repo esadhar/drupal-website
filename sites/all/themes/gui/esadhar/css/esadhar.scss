@@ -24,7 +24,7 @@ html{
 
 body{
   position:relative;
-  height:100%;
+  height:100%!important;
 }
 //, html.overlay-open body
 // html.overlay-open{
@@ -38,6 +38,10 @@ body{
 
 #header{
   padding:1em 0;
+}
+
+#center{
+  padding-bottom:6em;
 }
 
 #block-menu-menu-header-menu{
@@ -202,6 +206,13 @@ body{
   position:absolute;
   width:100%;
   bottom:0;
+  .row{
+    background-color:#fff;
+    .region{
+      padding:0.5em;
+    }
+  }
+
 }
 
 #main-bg-wrapper{
