@@ -73,7 +73,7 @@ function page_field_default_field_instances() {
             'bg_image_important' => 1,
             'bg_image_media_query' => 'all',
             'bg_image_repeat' => 'no-repeat',
-            'bg_image_selector' => '#bg_image',
+            'bg_image_selector' => '#main-bg',
             'bg_image_x' => 'left',
             'bg_image_y' => 'top',
           ),
@@ -109,6 +109,16 @@ function page_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => FALSE,
+        'insert_class' => '',
+        'insert_default' => array(
+          0 => 'auto',
+        ),
+        'insert_styles' => array(
+          0 => 'auto',
+        ),
+        'insert_width' => '',
         'preview_image_style' => 'medium',
         'progress_indicator' => 'throbber',
       ),
@@ -117,10 +127,72 @@ function page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_visuel'
+  $field_instances['node-page-field_visuel'] = array(
+    'bundle' => 'page',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_visuel',
+    'label' => 'Visuel',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => 'visuels',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 1,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'image_large',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'icon_link' => 'icon_link',
+          'image' => 0,
+          'image_large' => 0,
+          'image_medium' => 0,
+          'image_thumbnail' => 0,
+          'link' => 'link',
+        ),
+        'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 10,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
   t('Image de fond');
+  t('Visuel');
 
   return $field_instances;
 }

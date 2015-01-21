@@ -43,19 +43,19 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
   font-size: 10px;
   vertical-align: super; }
 
-h2 {
+h2:before {
   content: "h2 "; }
 
-h3 {
+h3:before {
   content: "h3 "; }
 
-h4 {
+h4:before {
   content: "h4 "; }
 
-h5 {
+h5:before {
   content: "h5 "; }
 
-h6 {
+h6:before {
   content: "h6 "; }
 
 br:after {
@@ -73,11 +73,6 @@ p {
 
 div {
   border: 1px solid #1A1A1A; }
-
-h3 {
-  color: #E75A0C;
-  font-size: 1.323em;
-  font-weight: 600; }
 
 /* LAYOUT AND GRAPHICS */
 /*

@@ -66,7 +66,6 @@
 * @see template_process()
 */
 ?>
-<div id="container">
   <header id="header" class="row">
     <hgroup class="logo">
       <?php
@@ -137,5 +136,3 @@
     <?php print render($page['footer']); ?>
     </div>
   </footer><!-- /footer -->
-
-</div><!-- /container -->

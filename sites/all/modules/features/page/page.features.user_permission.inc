@@ -14,7 +14,6 @@ function page_user_default_permissions() {
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
     'roles' => array(
-      'administrator' => 'administrator',
       'root' => 'root',
     ),
     'module' => 'node',
@@ -34,6 +33,7 @@ function page_user_default_permissions() {
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
     'roles' => array(
+      'administrator' => 'administrator',
       'root' => 'root',
     ),
     'module' => 'node',
@@ -43,6 +43,7 @@ function page_user_default_permissions() {
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
     'roles' => array(
+      'administrator' => 'administrator',
       'root' => 'root',
     ),
     'module' => 'node',

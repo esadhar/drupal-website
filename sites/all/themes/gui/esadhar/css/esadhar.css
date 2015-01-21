@@ -6421,7 +6421,7 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 /*
-* EUP
+* ESADHaR
 */
 /*
 TITRE PAGE :
@@ -6450,7 +6450,14 @@ p {
 p.heading {
   font-size: 1.25em !important; }
 
-#container {
+html {
+  position: relative; }
+
+body {
+  position: relative;
+  height: 100%; }
+
+#root {
   position: relative;
   min-height: 100%; }
 
@@ -6568,8 +6575,7 @@ p.heading {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: red; }
+  height: 100%; }
 
 #main-bg {
   width: 100%;

@@ -13,23 +13,23 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before{
 
 h2{
 	// font-size:24px;
-	content:"h2 ";
+	&:before{content:"h2 ";}
 }
 h3{
 	// font-size:18px;
-	content:"h3 ";
+	&:before{content:"h3 ";}
 }
 h4{
 	// font-size:16px;
-	content:"h4 ";
+	&:before{content:"h4 ";}
 }
 h5{
 	// font-size:14px;
-	content:"h5 ";
+	&:before{content:"h5 ";}
 }
 h6{
 	// font-size:12px;
-	content:"h6 ";
+	&:before{content:"h6 ";}
 }
 
 br:after{content:"·"; color:red; border: 1px solid #999;}
@@ -38,11 +38,6 @@ img{height:auto; margin:0.5em 0; max-width:99%;}
 p{ border: 1px dashed #848484; }
 div{border: 1px solid #1A1A1A;}
 
-h3{
-    color:$orange-light;
-    font-size:1.323em;
-    font-weight:600;
-  }
 
 /* LAYOUT AND GRAPHICS */
 /*

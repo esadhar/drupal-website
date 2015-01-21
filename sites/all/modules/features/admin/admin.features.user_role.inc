@@ -16,6 +16,18 @@ function admin_user_default_roles() {
     'weight' => 2,
   );
 
+  // Exported role: anonymous user.
+  $roles['anonymous user'] = array(
+    'name' => 'anonymous user',
+    'weight' => 0,
+  );
+
+  // Exported role: authenticated user.
+  $roles['authenticated user'] = array(
+    'name' => 'authenticated user',
+    'weight' => 1,
+  );
+
   // Exported role: root.
   $roles['root'] = array(
     'name' => 'root',

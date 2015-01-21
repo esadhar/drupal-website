@@ -5,7 +5,7 @@
 
 
 /*
-* EUP
+* ESADHaR
 */
 
 @import "communs.scss";
@@ -17,15 +17,21 @@ $menu-color:#FFF;
 $menu-bg-color:#000;
 
 html{
+  position:relative;
   // background-color:#E0E0E0;
-
-}
-body, html{
-  // position:relative;
+  // overflow:auto;
 }
 
+body{
+  position:relative;
+  height:100%;
+}
+//, html.overlay-open body
+// html.overlay-open{
+//   overflow:auto;
+// }
 
-#container{
+#root{
   position:relative;
   min-height:100%;
 }
@@ -166,8 +172,6 @@ body, html{
       max-width:9em;
     }
   }
-
-
 }
 
 #content{
@@ -202,7 +206,7 @@ body, html{
   z-index:-1;
   top:0; left:0;
   width:100%; height:100%;
-  background-color:red;
+  //background-color:red;
 }
 #main-bg{
   width:100%; height:100%;

@@ -25,6 +25,7 @@ function admin_wysiwyg_default_profiles() {
           'bold' => 1,
           'italic' => 1,
           'underline' => 1,
+          'strikethrough' => 1,
           'bullist' => 1,
           'numlist' => 1,
           'undo' => 1,
@@ -32,6 +33,7 @@ function admin_wysiwyg_default_profiles() {
           'link' => 1,
           'unlink' => 1,
           'image' => 1,
+          'formatselect' => 1,
           'cut' => 1,
           'copy' => 1,
           'paste' => 1,
@@ -41,9 +43,6 @@ function admin_wysiwyg_default_profiles() {
         ),
         'advlink' => array(
           'advlink' => 1,
-        ),
-        'font' => array(
-          'formatselect' => 1,
         ),
         'fullscreen' => array(
           'fullscreen' => 1,
@@ -60,6 +59,9 @@ function admin_wysiwyg_default_profiles() {
         ),
         'wordcount' => array(
           'wordcount' => 1,
+        ),
+        'imce' => array(
+          'imce' => 1,
         ),
         'video_filter' => array(
           'video_filter' => 1,
@@ -78,11 +80,11 @@ function admin_wysiwyg_default_profiles() {
       'remove_linebreaks' => 1,
       'apply_source_formatting' => 0,
       'paste_auto_cleanup_on_paste' => 1,
-      'block_formats' => 'h2,h3,h4,h5,h6',
-      'css_setting' => 'theme',
-      'css_path' => '',
+      'block_formats' => 'h3,h4,h5,h6,p',
+      'css_setting' => 'self',
+      'css_path' => '/sites/all/themes/gui/esadhar/css/wysiwyg.css',
       'css_classes' => '',
-      'buttonorder' => 'fullscreen,separator,bold,italic,underline,separator,formatselect,separator,bullist,numlist,advlist,separator,link,advlink,unlink,separator,image,advimage,video_filter,separator,cut,copy,paste,pastetext,search,replace,wordcount,separator,undo,redo,separator,break',
+      'buttonorder' => 'fullscreen,separator,bold,italic,underline,separator,formatselect,separator,bullist,numlist,advlist,separator,link,advlink,unlink,separator,image,advimage,video_filter,separator,cut,copy,paste,pastetext,search,replace,wordcount,separator,undo,redo,separator,break,imce,strikethrough',
     ),
   );
 

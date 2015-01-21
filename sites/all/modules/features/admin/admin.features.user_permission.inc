@@ -10,13 +10,99 @@
 function admin_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'access admin theme'.
+  $permissions['access admin theme'] = array(
+    'name' => 'access admin theme',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'root' => 'root',
+    ),
+    'module' => 'admin_theme',
+  );
+
   // Exported permission: 'access administration menu'.
   $permissions['access administration menu'] = array(
     'name' => 'access administration menu',
     'roles' => array(
+      'administrator' => 'administrator',
       'root' => 'root',
     ),
     'module' => 'admin_menu',
+  );
+
+  // Exported permission: 'access backup and migrate'.
+  $permissions['access backup and migrate'] = array(
+    'name' => 'access backup and migrate',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'backup_migrate',
+  );
+
+  // Exported permission: 'access backup files'.
+  $permissions['access backup files'] = array(
+    'name' => 'access backup files',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'backup_migrate',
+  );
+
+  // Exported permission: 'access content'.
+  $permissions['access content'] = array(
+    'name' => 'access content',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'root' => 'root',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'access workflow summary views'.
+  $permissions['access workflow summary views'] = array(
+    'name' => 'access workflow summary views',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'workflow_views',
+  );
+
+  // Exported permission: 'administer background image'.
+  $permissions['administer background image'] = array(
+    'name' => 'administer background image',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'root' => 'root',
+    ),
+    'module' => 'bg_image',
+  );
+
+  // Exported permission: 'administer backup and migrate'.
+  $permissions['administer backup and migrate'] = array(
+    'name' => 'administer backup and migrate',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'backup_migrate',
+  );
+
+  // Exported permission: 'administer blocks'.
+  $permissions['administer blocks'] = array(
+    'name' => 'administer blocks',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'block',
+  );
+
+  // Exported permission: 'administer content types'.
+  $permissions['administer content types'] = array(
+    'name' => 'administer content types',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'administer devel menu items'.
@@ -28,6 +114,15 @@ function admin_user_default_permissions() {
     'module' => 'menu_admin_per_menu',
   );
 
+  // Exported permission: 'administer features'.
+  $permissions['administer features'] = array(
+    'name' => 'administer features',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'features',
+  );
+
   // Exported permission: 'administer features menu items'.
   $permissions['administer features menu items'] = array(
     'name' => 'administer features menu items',
@@ -37,10 +132,29 @@ function admin_user_default_permissions() {
     'module' => 'menu_admin_per_menu',
   );
 
+  // Exported permission: 'administer image styles'.
+  $permissions['administer image styles'] = array(
+    'name' => 'administer image styles',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'image',
+  );
+
+  // Exported permission: 'administer imce'.
+  $permissions['administer imce'] = array(
+    'name' => 'administer imce',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'imce',
+  );
+
   // Exported permission: 'administer main-menu menu items'.
   $permissions['administer main-menu menu items'] = array(
     'name' => 'administer main-menu menu items',
     'roles' => array(
+      'administrator' => 'administrator',
       'root' => 'root',
     ),
     'module' => 'menu_admin_per_menu',
@@ -68,6 +182,7 @@ function admin_user_default_permissions() {
   $permissions['administer menu-header-menu menu items'] = array(
     'name' => 'administer menu-header-menu menu items',
     'roles' => array(
+      'administrator' => 'administrator',
       'root' => 'root',
     ),
     'module' => 'menu_admin_per_menu',
@@ -77,6 +192,7 @@ function admin_user_default_permissions() {
   $permissions['administer menu-menu-gauche menu items'] = array(
     'name' => 'administer menu-menu-gauche menu items',
     'roles' => array(
+      'administrator' => 'administrator',
       'root' => 'root',
     ),
     'module' => 'menu_admin_per_menu',
@@ -91,6 +207,15 @@ function admin_user_default_permissions() {
     'module' => 'menu_admin_per_menu',
   );
 
+  // Exported permission: 'administer nodes'.
+  $permissions['administer nodes'] = array(
+    'name' => 'administer nodes',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'administer user-menu menu items'.
   $permissions['administer user-menu menu items'] = array(
     'name' => 'administer user-menu menu items',
@@ -98,6 +223,33 @@ function admin_user_default_permissions() {
       'root' => 'root',
     ),
     'module' => 'menu_admin_per_menu',
+  );
+
+  // Exported permission: 'administer workflow'.
+  $permissions['administer workflow'] = array(
+    'name' => 'administer workflow',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'workflow_admin_ui',
+  );
+
+  // Exported permission: 'delete backup files'.
+  $permissions['delete backup files'] = array(
+    'name' => 'delete backup files',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'backup_migrate',
+  );
+
+  // Exported permission: 'delete revisions'.
+  $permissions['delete revisions'] = array(
+    'name' => 'delete revisions',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'display drupal links'.
@@ -116,6 +268,33 @@ function admin_user_default_permissions() {
       'root' => 'root',
     ),
     'module' => 'admin_menu',
+  );
+
+  // Exported permission: 'generate features'.
+  $permissions['generate features'] = array(
+    'name' => 'generate features',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'features',
+  );
+
+  // Exported permission: 'manage background images'.
+  $permissions['manage background images'] = array(
+    'name' => 'manage background images',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'bg_image_ui',
+  );
+
+  // Exported permission: 'manage features'.
+  $permissions['manage features'] = array(
+    'name' => 'manage features',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'features',
   );
 
   // Exported permission: 'menu edit devel'.
@@ -140,6 +319,7 @@ function admin_user_default_permissions() {
   $permissions['menu edit main-menu'] = array(
     'name' => 'menu edit main-menu',
     'roles' => array(
+      'administrator' => 'administrator',
       'root' => 'root',
     ),
     'module' => 'menu_editor',
@@ -158,6 +338,7 @@ function admin_user_default_permissions() {
   $permissions['menu edit menu-header-menu'] = array(
     'name' => 'menu edit menu-header-menu',
     'roles' => array(
+      'administrator' => 'administrator',
       'root' => 'root',
     ),
     'module' => 'menu_editor',
@@ -167,6 +348,7 @@ function admin_user_default_permissions() {
   $permissions['menu edit menu-menu-gauche'] = array(
     'name' => 'menu edit menu-menu-gauche',
     'roles' => array(
+      'administrator' => 'administrator',
       'root' => 'root',
     ),
     'module' => 'menu_editor',
@@ -188,6 +370,99 @@ function admin_user_default_permissions() {
       'root' => 'root',
     ),
     'module' => 'menu_editor',
+  );
+
+  // Exported permission: 'participate in workflow'.
+  $permissions['participate in workflow'] = array(
+    'name' => 'participate in workflow',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'root' => 'root',
+    ),
+    'module' => 'workflow_admin_ui',
+  );
+
+  // Exported permission: 'perform backup'.
+  $permissions['perform backup'] = array(
+    'name' => 'perform backup',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'backup_migrate',
+  );
+
+  // Exported permission: 'rename features'.
+  $permissions['rename features'] = array(
+    'name' => 'rename features',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'features',
+  );
+
+  // Exported permission: 'restore from backup'.
+  $permissions['restore from backup'] = array(
+    'name' => 'restore from backup',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'backup_migrate',
+  );
+
+  // Exported permission: 'revert revisions'.
+  $permissions['revert revisions'] = array(
+    'name' => 'revert revisions',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'schedule workflow transitions'.
+  $permissions['schedule workflow transitions'] = array(
+    'name' => 'schedule workflow transitions',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'workflow',
+  );
+
+  // Exported permission: 'show workflow state form'.
+  $permissions['show workflow state form'] = array(
+    'name' => 'show workflow state form',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'workflow',
+  );
+
+  // Exported permission: 'view all background images'.
+  $permissions['view all background images'] = array(
+    'name' => 'view all background images',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'bg_image',
+  );
+
+  // Exported permission: 'view own unpublished content'.
+  $permissions['view own unpublished content'] = array(
+    'name' => 'view own unpublished content',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'view revisions'.
+  $permissions['view revisions'] = array(
+    'name' => 'view revisions',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'node',
   );
 
   return $permissions;
