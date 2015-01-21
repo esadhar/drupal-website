@@ -1,0 +1,41 @@
+<?php
+
+
+/**
+ * Implements hook_init().
+ */
+function bg_image_default_init() {
+
+  if (bg_image_is_excluded())
+    return true;
+
+  # get a random node from bg_image type
+  if(bg_image_node_is_configured()){
+    $node_type = variable_get('bg_image_node_type', '');
+    $node_field = variable_get('bg_image_node_field', '');
+
+    $query = new EntityFieldQuery();
+    $query
+      ->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', $node_type)
+      ->fieldCondition($node_field, 'fid', 'NULL', '!=')
+      ->addTag('random')
+      ->range(0, 1)
+      ->addMetaData('account', user_load(1)); // Run the query as user 1.
+
+    $result = $query->execute();
+    // dsm($result, 'result');
+
+    if (isset($result['node'])) {
+      $bg_nodes = $result['node'];
+      $bg_node = array_pop($bg_nodes);
+      bg_image_add_background_image_from_node($bg_node->nid);
+    }
+  }
+}
+
+function bg_image_default_query_random_alter($query){
+  $query->orderRandom();
+}
+
+

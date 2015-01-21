@@ -68,11 +68,7 @@
 ?>
   <header id="header" class="row">
     <hgroup class="logo">
-      <?php
-        if ($site_title) {
-          print $site_title;
-        }
-      ?>
+      <a href="<?php print $front_page; ?>"><?php print $site_title;?></a>
     </hgroup>
 
     <?php print render($page['header']); ?>

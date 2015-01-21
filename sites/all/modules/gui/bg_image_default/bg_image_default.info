@@ -1,0 +1,6 @@
+name = Background Image Default
+description = Apply a default random background images to pages which doesn't have already one.
+version = "7.x-0.x-dev"
+core = "7.x"
+project = "bg_image"
+dependencies[] = "bg_image"
