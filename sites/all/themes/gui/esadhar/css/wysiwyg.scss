@@ -10,7 +10,6 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before{
 	 color:blue; font-weight: normal; font-size:10px; vertical-align: super;
 }
 
-
 h2{
 	// font-size:24px;
 	&:before{content:"h2 ";}

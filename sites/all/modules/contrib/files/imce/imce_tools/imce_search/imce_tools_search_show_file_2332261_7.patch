@@ -1,0 +1,98 @@
+--- a/imce_search/imce_search.js	(revision fe3b9983eab27bf2bfa84e0a2b3bc1ce1af9b1de)
++++ b/imce_search/imce_search.js	(revision )
+@@ -19,12 +19,7 @@
+           jQuery(li).click(function () {
+             file = fullpath.substr(fullpath.lastIndexOf('/') + 1);
+             dir = fullpath.substr(0, fullpath.lastIndexOf('/'));
+-             if (dir!=imce.conf.dir) {
+-              imce.navigate(dir);
+-              imce.dirActivate(dir);
+-            }
+-            imce.dirActivate(dir);
+-            imce.highlight(file);
++                        imce.imceSearch.navigate(dir, file);
+           }).css('cursor','pointer').addClass('link');
+           if (index > 10) {
+             jQuery(li).addClass('toggle');
+@@ -56,4 +51,79 @@
+     });
+     return false;
+   });
++
++    imce.hooks.list.push(function (row) {
++        //look if there is file to highlight, and highlight it.
++        if (typeof imce.imceSearch.file !== 'undefined' && imce.imceSearch.file === row.id) {
++            if (imce.imceSearch.selectFile(imce.imceSearch.file)) {
++                imce.imceSearch.file = false;
++            }
++        }
++    });
++
++    imce.imceSearch = {
++        dirToNavigate: false,
++        file: false,
++        navigate : function (dir, file) {
++            //first try to navigate to given dir..
++            if (dir === imce.conf.dir || this.navigateToDir(dir)) {
++                imce.dirActivate(dir);
++                if (typeof file !== 'undefined') {
++                    //try to highlight the file
++                    if (!imce.imceSearch.selectFile(file)) {
++                        //file highlighting not possible, cache and try later..
++                        imce.imceSearch.file = file;
++                    } else {
++                        imce.imceSearch.file = false;
++                        imce.imceSearch.dirToNavigate = false;
++                    }
++                }
++                return;
++            }
++            // Navigation was not possible, (dir to navigate is uncached) have to try something else..
++            var parentToNavigate = '.';
++            // search in imce.tree for parents of given dir
++            for (var key in imce.tree) {
++                if (dir.indexOf(key) === 0) {
++                    parentToNavigate = key;
++                }
++            }
++            //navigate to latest found parent dir
++            //save dir to navigate and file to use later
++            imce.imceSearch.dirToNavigate = dir;
++            if (typeof file !== 'undefined') imce.imceSearch.file = file;
++            this.navigate(parentToNavigate);
++            //when Ajax is finished
++            jQuery(document).one('ajaxStop',function(){
++                //look if we have childs to load and trigger navigate again.
++                if (imce.imceSearch.dirToNavigate && imce.imceSearch.file) {
++                    imce.imceSearch.navigate(imce.imceSearch.dirToNavigate,imce.imceSearch.file);
++                } else if (imce.imceSearch.file && imce.imceSearch.selectFile(imce.imceSearch.file)){
++                    imce.imceSearch.file = false;
++                }
++            });
++            return;
++        },
++        navigateToDir: function (dir) {
++            if (typeof imce.tree[dir] !== 'undefined' && imce.vars.navbusy !==  dir) {
++                imce.navigate(dir);
++                imce.dirActivate(dir);
++                return true;
++            }
++            return false;
++        },
++        selectFile: function (fid) {
++            //look if fid exists or already selected
++            if (imce.selected[fid]) {
++                //already selected, don't need to select it.
++                return true;
++            }
++            if (imce.fids[fid] || jQuery('#' + fid).length) {
++                //file is listed, can be selected
++                imce.highlight(fid);
++                return true;
++            }
++            return false;
++        }
++    };
+-});
++});
+\ No newline at end of file

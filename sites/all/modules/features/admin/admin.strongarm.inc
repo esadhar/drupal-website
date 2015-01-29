@@ -215,6 +215,7 @@ function admin_strongarm() {
   $strongarm->value = array(
     'imce_file_path_content' => 1,
     'imce_mkdir_content' => 1,
+    'imce_search_content' => 1,
   );
   $export['imce_custom_content'] = $strongarm;
 
