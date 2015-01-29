@@ -25,7 +25,7 @@ if ($vars['site_name']) {
 //   $site_fields[] = check_plain($vars['site_slogan']);
 // }
 
-$vars['site_title'] = '<h1>'. implode(' ', $site_fields) .'</h1>';
+$vars['site_title'] = '<h1 id="site-name"><a href="'.$vars["front_page"].'">'. implode(' ', $site_fields) .'</a></h1>';
 
 
 

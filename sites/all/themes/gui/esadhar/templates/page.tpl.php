@@ -67,9 +67,7 @@
 */
 ?>
   <header id="header" class="row">
-    <hgroup class="logo">
-      <a href="<?php print $front_page; ?>"><?php print $site_title;?></a>
-    </hgroup>
+    <?php print $site_title;?>
 
     <?php print render($page['header']); ?>
 
@@ -112,7 +110,7 @@
         <section id="content" class="columns large-9" >
             <?php print render($page['content_top']); ?>
 
-            <?php if($title): ?><h1 class="page-title"><?php print $title ?></h1><?php endif; ?>
+            <?php if($title): ?><h2 class="page-title"><?php print $title ?></h2><?php endif; ?>
             <?php print render($page['content']); ?>
 
             <?php print render($page['content_bottom']); ?>

@@ -1,25 +1,22 @@
 @charset "UTF-8";
 /* LISIBILITY */
-/*
-TITRE PAGE :
-Source sans pro light / 35 pt
-couleur : (gris) R111 V111 B110
-
-SOUS-TITRE 1 :
-Source sans pro bold / 20 pt
-couleur (orange)  233 90 12
-
-TEXTE COURANT :
-Source sans pro light / 16 pt -> peut-être à adapter si trop gros ???
-couleur : noir
-
-prévoir du gras / de l’italique pour enrichir texte courant
-*/
+@font-face {
+  font-family: 'interval';
+  src: url("font/interval-webfont.eot");
+  src: url("font/interval-webfont.eot?#iefix") format("embedded-opentype"), url("font/interval-webfont.woff") format("woff"), url("font/interval-webfont.ttf") format("truetype"), url("font/interval-webfont.svg#intervalbook") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'interval';
+  src: url("font/interval_bold-webfont.eot");
+  src: url("font/interval_bold-webfont.eot?#iefix") format("embedded-opentype"), url("font/interval_bold-webfont.woff") format("woff"), url("font/interval_bold-webfont.ttf") format("truetype"), url("font/interval_bold-webfont.svg#intervalbold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
 html, body {
   font-size: 16px; }
 
 html, body, h1, h2, h3, h4, h5, h6 {
-  font-family: "source_sans_pro","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif; }
+  font-family: 'interval', monospace; }
 
 p {
   line-height: 1.3; }

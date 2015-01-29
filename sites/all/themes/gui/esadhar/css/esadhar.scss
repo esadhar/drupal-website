@@ -1,16 +1,34 @@
 @charset "UTF-8";
 
+
+
 @import "../bower_components/foundation/scss/normalize.scss";
-@import "../bower_components/foundation/scss/foundation.scss";
+
+
+
+
+@import "../bower_components/foundation/scss/foundation/functions";
+
+$row-width: rem-calc(1250);
+// $total-columns: 12;
+$column-gutter: rem-calc(20);
+
+//@import "../bower_components/foundation/scss/foundation/settings"; // this is not working, causing an error on compilation
+@import "../bower_components/foundation/scss/foundation/components/global";
+@import "../bower_components/foundation/scss/foundation/components/type";
+@import "../bower_components/foundation/scss/foundation/components/clearing";
+@import "../bower_components/foundation/scss/foundation/components/inline-lists";
+@import "../bower_components/foundation/scss/foundation/components/grid";
+@import "../bower_components/foundation/scss/foundation/components/block-grid";
+// @import "../bower_components/foundation/scss/foundation.scss"; // without importing the whole foundation, the final css files is 75% less heavier
 
 
 /*
 * ESADHaR
 */
-
 @import "communs.scss";
-
 @import "fonts.scss";
+
 
 
 $menu-color:#FFF;
@@ -44,40 +62,61 @@ body{
   padding-bottom:6em;
 }
 
+#site-name{
+  font-size: 1em;
+  font-weight: bold;
+  display:inline-block;
+  background-color: $menu-bg-color;
+  a{
+    font-size: 2em;
+    color:$menu-color;
+  }
+  margin:0;
+  padding: 0.5em 1.3em;
+}
+
+
 #block-menu-menu-header-menu{
   ul{
-    margin:0 0 0 0.25em;
-    padding:0;
+    margin:0; padding:0 1em;
+    background-color:$menu-bg-color;
+    display:inline-block;
   }
   li{
     position:relative;
-    margin:0 0 0 -0.25em; padding:0;
+    margin:0; padding:0;
     line-height:1;
+    letter-spacing: 0;
     ul{
+      padding:0 0 1em 0;
       li{
         margin:0em;
+
       }
     }
     a{
       color:$menu-color;
-      background-color:$menu-bg-color;
       display:block;
-      font-size:0.8em;
-      padding:0.6em 0.8em;
-      line-height:1.2em;
+      font-size:0.75em;
+      padding:0.3em 0.8em;
+      line-height:1.3em;
+      text-transform: uppercase;
     }
   }
 
   @media #{$large-up} {
     ul{
       li{
+      // @include inline-list();
         display:inline-block;
         vertical-align: top;
         ul{
           position:absolute;
-          top:1.5em; left:0;
+          top:100%; left:0;
           z-index:2;
           display:none;
+          padding:0 1em 1em;
+          margin:0 0 0 -1em;
           li{
             display:block;
           }
@@ -99,18 +138,18 @@ body{
 
 #block-menu-menu-menu-gauche{
   ul{
-    margin:0;padding:0;
+    margin:0;padding:1em;
+    background-color:$menu-bg-color;
   }
   li{
     list-style: none;
     margin:0;padding:0;
-    line-height:1.2;
+    line-height:1;
   }
   a{
     color:$menu-color;
-    background-color:$menu-bg-color;
     display:block;
-    padding:0.6em 0.8em;
+    padding:0.3em 0.4em;
   }
 }
 
@@ -143,6 +182,7 @@ body{
     @media #{$large-up} {
       ul{
         li{
+            margin:0 -0.3em 0 0;
           ul{
             position:absolute;
             top:0; left:100%;
@@ -163,13 +203,16 @@ body{
     }//end @media large-up
 
     a{
-      font-size:2em;
-      padding:0.6em 0.6em;
-      line-height:1.2em;
-      max-width:9em;
+      font-size:1.8em;
+      font-weight: bold;
+      text-transform: lowercase;
+      letter-spacing: -0.02em;
+      padding:0.6em 0.7em;
+      // max-width:10em;
       margin:0 0 0.15em 0;
     }
   }
+
 
   #leftsidebar &{
      a{
@@ -183,10 +226,11 @@ body{
 }
 
 #content{
-  h1.page-title{
+  h2.page-title, h2.node-title{
     background-color:#fff;
     font-size:1.8em;
     padding:1em;
+    a{color:#000;}
   }
   #block-system-main{
     background-color:#fff;
