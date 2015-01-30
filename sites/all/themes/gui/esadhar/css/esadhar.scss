@@ -82,7 +82,12 @@ body{
     margin:0; padding:0 1em;
     background-color:$menu-bg-color;
     display:inline-block;
+
+    &:hover>li:not(:hover),.not-front & li:not(.active-trail):not(:hover){
+      a{opacity:0.6;}
+    }
   }
+
   li{
     position:relative;
     margin:0; padding:0;
@@ -92,7 +97,6 @@ body{
       padding:0 0 1em 0;
       li{
         margin:0em;
-
       }
     }
     a{
@@ -102,6 +106,9 @@ body{
       padding:0.3em 0.8em;
       line-height:1.3em;
       text-transform: uppercase;
+      transition-property: opacity;
+      transition-duration: 0.2s;
+      transition-delay: 0s;
     }
   }
 
@@ -127,10 +134,10 @@ body{
             display:block;
           }
         }
-      }
-    }
-  }//end @media large-up
 
+      }//li
+    }//ul
+  }//end @media large-up
 }
 
 #leftsidebar{
@@ -141,6 +148,10 @@ body{
   ul{
     margin:0;padding:1em;
     background-color:$menu-bg-color;
+
+    &:hover>li:not(:hover),.not-front & li:not(.active-trail):not(:hover){
+      a{opacity:0.6;}
+    }
   }
   li{
     list-style: none;
@@ -179,9 +190,29 @@ body{
     display:block;
   }
 
-  #content &>.content{
-    @media #{$large-up} {
+  @media #{$large-up} {
+    &>.content>ul>li{
+      a{
+            font-weight: bold;
+            text-transform: lowercase;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            transition-property: color;
+            transition-duration: 0.2s;
+            transition-delay: 0s;
+      }
+      >a{font-size:1.7em;}
+      >ul{
+        >li{
+          >a{font-size:1.3em;}
+          li{
+            a{font-size: 0.9em;}
+          }
+        }
+      }
+    }
 
+    &>.content{
       >ul{
         // graphical tuning regarding level
         >li{
@@ -189,14 +220,7 @@ body{
           padding:0 $li-pad $li-pad 0;
 
           a{
-            font-weight: bold;
-            text-transform: lowercase;
-            letter-spacing: -0.02em;
             padding:0.6em 0.7em;
-            line-height: 1.2;
-            transition-property: color;
-            transition-duration: 0.2s;
-            transition-delay: 0s;
           }
           ul{
             position:absolute;
@@ -205,28 +229,22 @@ body{
             li{padding:0 0.2em 0.2em 0;}
           }
 
-          >a{font-size:1.7em;}
           >ul{
             margin-left:-$li-pad;
             padding-left:0.2em;
             >li{
-              >a{font-size:1.3em;}
               li{
-                a{font-size: 0.9em; padding:1em; min-width:15em;}
+                a{padding:1em; min-width:15em;}
               }
             }
           }
-
-        }
+        }// >li
 
         // interactivité généric sensé marcher pour n'iimporte quel profondeur d'arbo
         li{
-         // >ul{display:none;}
           >ul{
-            // display:none;
             opacity:0;
             top: -150%;
-            // z-index:5;
             transition-property: opacity, top;
             transition-duration: 0.5s, 0.5s;
             transition-delay: 0s, 0s;
@@ -234,12 +252,7 @@ body{
           &:not(:hover)>ul{z-index:-1;}
 
           &:hover{
-            // >ul{display:block;}
-            // z-index:10;
-            // >a{background-color: #eee;}
             >ul{
-              // display:block;
-              // z-index:9;
               opacity:1;
               top: 0;
               transition-property: opacity, top;
@@ -265,21 +278,38 @@ body{
         }
 
       }// ul
-    }//end @media large-up
-
-  }
+    }// for all, mainly for home, bellow sidebar tuning
 
 
-  #leftsidebar &{
-     a{
-      font-size:1em;
-      padding:0.3em 0.3em;
-      line-height:1.1em;
-      max-width:9em;
-      margin:0 0 0.15em 0;
-    }
-  }
-}
+    #leftsidebar &>.content{
+      >ul{
+        >li{
+          $li-pad : 0.4em;
+          padding:0 $li-pad $li-pad 0;
+          margin-right:-.5em;
+          >a{
+            font-size:1.15em;
+            padding:0.5em 0.6em;
+            letter-spacing: -0.1em;
+          }
+          >ul{
+            margin-left:-$li-pad;
+            padding-left:0.2em;
+            >li{
+              >a{font-size:1em;}
+              li{
+                a{font-size: 0.8em;}
+              }
+            }
+          }
+        }//>li
+      }//>ul
+    }//#leftsidebar
+
+  }//end @media large-up
+
+
+}// end main menu
 
 #content{
   h2.page-title, h2.node-title{

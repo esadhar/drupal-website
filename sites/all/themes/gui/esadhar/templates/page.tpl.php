@@ -68,16 +68,9 @@
 ?>
   <header id="header" class="row">
     <?php print $site_title;?>
-
     <?php print render($page['header']); ?>
-
-    <?php if ($breadcrumb): ?>
-      <section id="breadcrumb"><?php print $breadcrumb; ?></section>
-    <?php endif; ?>
-
   </header>
   <!-- /header -->
-
 
   <div id="center" class="row">
 
