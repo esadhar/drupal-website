@@ -280,7 +280,6 @@ body{
       }// ul
     }// for all, mainly for home, bellow sidebar tuning
 
-
     #leftsidebar &>.content{
       >ul{
         >li{
@@ -337,12 +336,28 @@ body{
   width:100%;
   bottom:0;
   .row{
+    height:auto;
     background-color:#fff;
     .region{
+      text-align: center;
       padding:0.5em;
     }
   }
+}
 
+#block-footer-message-footer-message{
+  p{
+    font-size:0.75em;
+    text-align: center;
+    margin:0;
+  }
+}
+
+#block-system-powered-by, #block-block-1{
+  display:inline-block;
+  .content{
+    font-size: 0.63em;
+  }
 }
 
 #main-bg-wrapper{

@@ -2677,9 +2677,21 @@ body {
   width: 100%;
   bottom: 0; }
   #footer .row {
+    height: auto;
     background-color: #fff; }
     #footer .row .region {
+      text-align: center;
       padding: 0.5em; }
+
+#block-footer-message-footer-message p {
+  font-size: 0.75em;
+  text-align: center;
+  margin: 0; }
+
+#block-system-powered-by, #block-block-1 {
+  display: inline-block; }
+  #block-system-powered-by .content, #block-block-1 .content {
+    font-size: 0.63em; }
 
 #main-bg-wrapper {
   position: fixed;
