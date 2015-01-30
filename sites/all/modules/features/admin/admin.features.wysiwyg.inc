@@ -63,6 +63,9 @@ function admin_wysiwyg_default_profiles() {
         'imce' => array(
           'imce' => 1,
         ),
+        'linkit' => array(
+          'linkit' => 1,
+        ),
         'video_filter' => array(
           'video_filter' => 1,
         ),
@@ -84,7 +87,7 @@ function admin_wysiwyg_default_profiles() {
       'css_setting' => 'self',
       'css_path' => '/sites/all/themes/gui/esadhar/css/wysiwyg.css',
       'css_classes' => '',
-      'buttonorder' => 'fullscreen,separator,bold,italic,underline,separator,formatselect,separator,bullist,numlist,advlist,separator,link,advlink,unlink,separator,image,advimage,video_filter,separator,cut,copy,paste,pastetext,search,replace,wordcount,separator,undo,redo,separator,break,imce,strikethrough',
+      'buttonorder' => 'fullscreen,separator,bold,italic,underline,separator,formatselect,separator,bullist,numlist,advlist,separator,link,advlink,linkit,unlink,separator,image,advimage,video_filter,separator,cut,copy,paste,pastetext,search,replace,wordcount,separator,undo,redo,separator,break,imce,strikethrough',
     ),
   );
 
