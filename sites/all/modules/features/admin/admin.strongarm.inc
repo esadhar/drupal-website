@@ -177,7 +177,7 @@ function admin_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'bg_image_style';
-  $strongarm->value = '';
+  $strongarm->value = 'background';
   $export['bg_image_style'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -509,7 +509,7 @@ function admin_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_page_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '[node:source:title]';
   $export['pathauto_node_page_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -763,6 +763,13 @@ function admin_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_pattern';
   $strongarm->value = '[term:vocabulary]/[term:name]';
   $export['pathauto_taxonomy_term_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_tags_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_tags_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

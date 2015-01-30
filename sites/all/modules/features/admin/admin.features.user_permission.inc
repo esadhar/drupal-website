@@ -216,6 +216,15 @@ function admin_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'administer pathauto'.
+  $permissions['administer pathauto'] = array(
+    'name' => 'administer pathauto',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'pathauto',
+  );
+
   // Exported permission: 'administer user-menu menu items'.
   $permissions['administer user-menu menu items'] = array(
     'name' => 'administer user-menu menu items',
@@ -370,6 +379,15 @@ function admin_user_default_permissions() {
       'root' => 'root',
     ),
     'module' => 'menu_editor',
+  );
+
+  // Exported permission: 'notify of path changes'.
+  $permissions['notify of path changes'] = array(
+    'name' => 'notify of path changes',
+    'roles' => array(
+      'root' => 'root',
+    ),
+    'module' => 'pathauto',
   );
 
   // Exported permission: 'participate in workflow'.

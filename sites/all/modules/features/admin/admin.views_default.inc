@@ -194,7 +194,7 @@ function admin_views_default_views() {
       'label' => '',
     ),
     'action::views_bulk_operations_modify_action' => array(
-      'selected' => 0,
+      'selected' => 1,
       'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
@@ -202,7 +202,7 @@ function admin_views_default_views() {
       'settings' => array(
         'show_all_tokens' => 1,
         'display_values' => array(
-          '_all_' => '_all_',
+          'promote' => 'promote',
         ),
       ),
     ),
@@ -216,7 +216,7 @@ function admin_views_default_views() {
       ),
     ),
     'action::node_promote_action' => array(
-      'selected' => 0,
+      'selected' => 1,
       'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
@@ -230,7 +230,7 @@ function admin_views_default_views() {
       'label' => '',
     ),
     'action::node_unpromote_action' => array(
-      'selected' => 0,
+      'selected' => 1,
       'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
@@ -251,7 +251,7 @@ function admin_views_default_views() {
       'label' => '',
     ),
     'action::node_unpublish_action' => array(
-      'selected' => 1,
+      'selected' => 0,
       'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
@@ -267,7 +267,7 @@ function admin_views_default_views() {
     'action::pathauto_node_update_action' => array(
       'selected' => 1,
       'postpone_processing' => 0,
-      'skip_confirmation' => 0,
+      'skip_confirmation' => 1,
       'override_label' => 0,
       'label' => '',
     ),
