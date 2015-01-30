@@ -2661,16 +2661,54 @@ body {
 #content h2.page-title, #content h2.node-title {
   background-color: #fff;
   font-size: 1.8em;
-  padding: 1em; }
+  padding: 1em;
+  margin: 0; }
   #content h2.page-title a, #content h2.node-title a {
     color: #000; }
 #content #block-system-main {
   background-color: #fff;
-  padding: 1em; }
+  padding: 1em;
+  margin: 1em 0; }
   #content #block-system-main h3 {
     font-size: 1.2em; }
   #content #block-system-main p {
-    font-size: 1em; }
+    font-size: 1em;
+    line-height: 1.5; }
+    #content #block-system-main p a {
+      color: #000;
+      border-bottom: 1px dashed #1A1A1A; }
+      #content #block-system-main p a:hover {
+        border-bottom: 1px dashed #000; }
+
+#rightsidebar .block {
+  background-color: #fff;
+  padding: 1em;
+  overflow: hidden;
+  margin: 0 0 1em 0; }
+  #rightsidebar .block > h2 {
+    font-size: 1.134em;
+    font-weight: bold;
+    text-transform: lowercase; }
+#rightsidebar ul {
+  padding: 0;
+  margin: 0; }
+  #rightsidebar ul:hover > li:not(:hover) a, .not-front #rightsidebar ul li:not(.active-trail):not(:hover) a {
+    opacity: 0.6; }
+  #rightsidebar ul ul {
+    padding: 0 0 0.5em 0.5em; }
+#rightsidebar li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.2; }
+#rightsidebar a {
+  font-size: 0.756em;
+  color: #000;
+  line-height: 0.8; }
+  #rightsidebar a:hover {
+    border-bottom: 1px dashed #000; }
+#rightsidebar .file-icon {
+  display: none; }
 
 #footer {
   position: absolute;
