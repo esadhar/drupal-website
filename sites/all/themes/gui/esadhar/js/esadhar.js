@@ -25,6 +25,44 @@ Drupal.behaviors.init_theme = function (context) {
 
 
 jQuery(document).ready(function($) {
+
+  // var $root = $("#root");
+  // var rootHeight = ($root.height() && $root.offsetHeight() || 0);
+  var body = document.body;
+  var html = document.documentElement;
+
+  var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+  // console.log('height', height);
+  var ran, min, max;
+
+  $('#leftsidebar, #rightsidebar').each(function(i, e){
+    // console.log("e", e);
+    // console.log('i', i);
+    min = !i ? 5 : 7;
+    max = !i ? 7 : 9;
+
+    // switch (i) {
+    //   case 0:
+    //     min = 3;
+    //     max = 5;
+    //     break;
+    //   case 1:
+    //     min = 5;
+    //     max = 7;
+    //     break;
+    //   case 2:
+    //     min = 7;
+    //     max = 9;
+    //     break;
+    // }
+    // console.log('min = '+min+" | max = "+max);
+
+    ran = (Math.random()*(max-min+1)+min)/10;
+    // console.log("ran", ran);
+    $(e).attr('data-top-bottom', 'margin-top:'+(height * ran)+'px');
+  });
+
+
   var s = skrollr.init();
 
 });

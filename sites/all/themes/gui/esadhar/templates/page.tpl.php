@@ -66,7 +66,9 @@
 * @see template_process()
 */
 ?>
-  <header id="header" class="row">
+  <header
+      id="header"
+      class="row">
     <?php print $site_title;?>
     <?php print render($page['header']); ?>
   </header>
@@ -74,7 +76,13 @@
 
   <div id="center" class="row">
 
-    <div id="leftsidebar" class="columns large-3">
+    <div
+      id="leftsidebar"
+      class="columns large-3 skrollable skrollable-before"
+      data-top-bottom="margin-top:0px"
+      data-top="margin-top:0px"
+      data-anchor-target="#root"
+      data-smooth-scrolling="off">
       <?php print render($page['sidebar_first']); ?>
     </div>
 
@@ -110,7 +118,13 @@
 
           </section>
 
-        <section id="rightsidebar" class="columns large-3">
+        <section
+          id="rightsidebar"
+          class="columns large-3 skrollable skrollable-before"
+          data-top-bottom="margin-top:0px"
+          data-top="margin-top:0px"
+          data-anchor-target="#root"
+          data-smooth-scrolling="off">
           <?php print render($page['sidebar_second']) ?>
         </section>
 

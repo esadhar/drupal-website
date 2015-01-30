@@ -88,7 +88,7 @@
         <div id="main-bg-wrapper">
           <div id="main-bg"
                   data-smooth-scrolling="off"
-                  data-anchor-target="#center"
+                  data-anchor-target="#root"
                   data-top="width:100%; height:100%; margin-left:0%; margin-top:0%;"
                   data-top-bottom="width:115%; height:115%; margin-left:-5%; margin-top:-7%;">
           </div>
