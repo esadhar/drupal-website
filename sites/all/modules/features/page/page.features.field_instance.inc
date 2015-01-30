@@ -22,7 +22,7 @@ function page_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -55,6 +55,65 @@ function page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_documents'
+  $field_instances['node-page-field_documents'] = array(
+    'bundle' => 'page',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_documents',
+    'label' => 'Documents',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => 'documents',
+      'file_extensions' => 'txt pdf doc docx csv',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'insert' => 1,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'icon_link' => 'icon_link',
+          'image' => 0,
+          'image_background' => 0,
+          'image_large' => 0,
+          'image_linkit_thumb' => 0,
+          'image_medium' => 0,
+          'image_square_thumb' => 0,
+          'image_thumbnail' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 11,
+    ),
+  );
+
   // Exported field_instance: 'node-page-field_image_de_fond'
   $field_instances['node-page-field_image_de_fond'] = array(
     'bundle' => 'page',
@@ -80,7 +139,7 @@ function page_field_default_field_instances() {
           'image_style' => 'background',
         ),
         'type' => 'bg_image_formatter',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -143,7 +202,7 @@ function page_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -197,6 +256,7 @@ function page_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Documents');
   t('Image de fond');
   t('Visuel');
 

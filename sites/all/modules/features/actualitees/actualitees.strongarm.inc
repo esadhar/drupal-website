@@ -155,6 +155,48 @@ function actualitees_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformscols_field_placements_actualitee_default';
+  $strongarm->value = array(
+    'title' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => 'Titre',
+    ),
+    'additional_settings' => array(
+      'region' => 'main',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Vertical tabs',
+      'hidden' => 0,
+    ),
+    'actions' => array(
+      'region' => 'right',
+      'weight' => '100',
+      'has_required' => FALSE,
+      'title' => 'Enregistrer',
+      'hidden' => 0,
+    ),
+    'body' => array(
+      'region' => 'main',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => 'Body',
+      'hidden' => 0,
+    ),
+    'field_visuel' => array(
+      'region' => 'main',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Visuel',
+      'hidden' => 0,
+    ),
+  );
+  $export['nodeformscols_field_placements_actualitee_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_actualitee';
   $strongarm->value = array(
     0 => 'status',

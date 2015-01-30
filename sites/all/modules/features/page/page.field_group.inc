@@ -42,6 +42,34 @@ function page_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_documents|node|page|form';
+  $field_group->group_name = 'group_documents';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_horizontal_tabs';
+  $field_group->data = array(
+    'label' => 'Documents',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_documents',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-documents field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_documents|node|page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_fond|node|page|form';
   $field_group->group_name = 'group_fond';
   $field_group->entity_type = 'node';
@@ -82,6 +110,7 @@ function page_field_group_info() {
     'children' => array(
       0 => 'group_contenu',
       1 => 'group_fond',
+      2 => 'group_documents',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
