@@ -7,17 +7,19 @@ core = "7.x"
 engine = "phptemplate"
 
 ;----------// Styles
+stylesheets[all][] = "bower_components/pushy/css/pushy.css"
 stylesheets[all][] = "css/esadhar.css"
 
 ;----------// Scripts
 ;scripts[] = "js/foundation.min.js"
 scripts[] = "bower_components/skrollr/dist/skrollr.min.js"
+scripts[] = "bower_components/pushy/js/pushy.js"
 scripts[] = "js/esadhar.js"
 
 ;----------// Regions
 
 regions[header] = Header
-
+regions[off_canvas_menu] = Off Canvas Menu
 regions[help] = Help
 
 regions[top] = Top
@@ -49,5 +51,18 @@ features[] = secondary_menu
 
 plugins[panels][layouts] = layouts
 
+;------------// Breakpoints
+breakpoints[Small] = only screen and (max-width: 640px)
+; max-width 640px, mobile-only styles, use when QAing mobile issues
 
-;----------// Theme Setting Defaults
+breakpoints[Medium] = only screen and (min-width: 641px)
+; min-width 641px, medium screens
+
+breakpoints[Large] = only screen and (min-width: 1025px)
+; min-width 1025px, large screens
+
+breakpoints[XLarge] = only screen and (min-width: 1441px)
+; min-width 1441px, xlarge screens
+
+breakpoints[XXLarge] = only screen and (min-width: 1921px)
+; min-width 1921px, xxlarge screens

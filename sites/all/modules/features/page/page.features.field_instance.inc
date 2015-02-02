@@ -136,7 +136,7 @@ function page_field_default_field_instances() {
             'bg_image_x' => 'left',
             'bg_image_y' => 'top',
           ),
-          'image_style' => 'background',
+          'image_style' => 'resp_img__esadhar',
         ),
         'type' => 'bg_image_formatter',
         'weight' => 2,

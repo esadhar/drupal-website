@@ -19,6 +19,7 @@ $column-gutter: rem-calc(20);
 @import "../bower_components/foundation/scss/foundation/components/clearing";
 @import "../bower_components/foundation/scss/foundation/components/inline-lists";
 @import "../bower_components/foundation/scss/foundation/components/grid";
+@import "../bower_components/foundation/scss/foundation/components/top-bar";
 @import "../bower_components/foundation/scss/foundation/components/block-grid";
 // @import "../bower_components/foundation/scss/foundation.scss"; // without importing the whole foundation, the final css files is 75% less heavier
 
@@ -63,6 +64,31 @@ body{
   padding-bottom:6em;
 }
 
+#pushy-btn{
+  color:#fff;
+  background-color: $menu-bg-color;
+  display:inline-block;
+  padding:0.5em 1.2em 0.5em 1em;
+  span{
+    font-size:2em;
+    position:relative;
+    // display:block;
+  }
+  span:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 0.8em;
+    height: 0.10em;
+    background: white;
+    box-shadow:
+      0 0.25em 0 0 white,
+      0 0.5em 0 0 white;
+  }
+
+}
+
 #site-name{
   font-size: 1em;
   font-weight: bold;
@@ -93,6 +119,7 @@ body{
     margin:0; padding:0;
     line-height:1;
     letter-spacing: 0;
+    list-style: none;
     ul{
       padding:0 0 1em 0;
       li{
@@ -110,6 +137,24 @@ body{
       transition-duration: 0.2s;
       transition-delay: 0s;
     }
+  }
+
+  @media #{$small-only} {
+
+
+    &>.content>ul.menu{
+      padding:1.5em 0.5em;
+      >li{
+        a{font-size: 1.2em;}
+        >ul{
+          padding:0 0 0 0.5em;
+          a{
+            font-size: 1em;
+          }
+        }
+      }
+    }
+
   }
 
   @media #{$large-up} {
@@ -140,8 +185,23 @@ body{
   }//end @media large-up
 }
 
+$pushy-width:300px;
+.pushy{
+  width:$pushy-width;
+  background-color: $menu-bg-color;
+}
+
+.pushy-left{
+    transform: translate3d(-$pushy-width,0,0); /* Updated the values */
+    /* Don't forget the vendor prefixes */
+}
+
 #leftsidebar{
   padding-left:0;
+
+  @media #{$small-only} {
+    margin-top:0!important;
+  }
 }
 
 #block-menu-menu-menu-gauche{
@@ -163,9 +223,14 @@ body{
     display:block;
     padding:0.3em 0.4em;
   }
+  // @media #{$small-only} {
+  //   display:none;
+  // }
 }
 
 #block-system-main-menu{
+  padding:0.4em 0;
+  margin:0.4em 0;
   ul{
     margin:0;
     padding:0;
@@ -188,19 +253,40 @@ body{
     color:$menu-bg-color;
     background-color:$menu-color;
     display:block;
+    //
+    font-weight: bold;
+    text-transform: lowercase;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    transition-property: color;
+    transition-duration: 0.2s;
+    transition-delay: 0s;
+  }
+
+  @media #{$small-only} {
+    &>.content>ul>li{
+      margin-right:-0.5em;
+      padding:0 0.4em 0.4em 0;
+      a{
+        font-size:1.3em;
+        padding:0.6em 0.7em;
+        letter-spacing: -0.06em;
+      }
+      >ul{display:none;}
+    }
   }
 
   @media #{$large-up} {
     &>.content>ul>li{
-      a{
-            font-weight: bold;
-            text-transform: lowercase;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
-            transition-property: color;
-            transition-duration: 0.2s;
-            transition-delay: 0s;
-      }
+      // a{
+      //       font-weight: bold;
+      //       text-transform: lowercase;
+      //       letter-spacing: -0.02em;
+      //       line-height: 1.2;
+      //       transition-property: color;
+      //       transition-duration: 0.2s;
+      //       transition-delay: 0s;
+      // }
       >a{font-size:1.7em;}
       >ul{
         >li{
@@ -342,18 +428,17 @@ body{
   }
 }
 
-#rightsidebar{
-  .block{
-    background-color: #fff;
-    padding:1em;
-    overflow:hidden;
-    // word-wrap:break-word;
-    margin:0 0 1em 0;
-    >h2{
-      font-size: 1.134em;
-      font-weight: bold;
-      text-transform: lowercase;
-    }
+#block-menu-block-1, #block-fieldblock-node-page-default-field-documents {
+  background-color: #fff;
+  padding:1em;
+  overflow:hidden;
+  // word-wrap:break-word;
+  margin:0 0 1em 0;
+
+  >h2{
+    font-size: 1.134em;
+    font-weight: bold;
+    text-transform: lowercase;
   }
 
   ul{
@@ -363,10 +448,14 @@ body{
     }
     ul{padding:0 0 0.5em 0.5em;}
   }
-  li{
+
+  li.leaf{
     list-style: none;
     padding:0; margin:0;
     line-height: 1.2;
+    &.active{
+      font-weight: bold;
+    }
   }
   a{
     font-size: 0.756em;

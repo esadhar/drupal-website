@@ -66,23 +66,43 @@
 * @see template_process()
 */
 ?>
+
+  <?php if($page["off_canvas_menu"]): ?>
+    <nav class="pushy pushy-left">
+      <?php print render($page["off_canvas_menu"]); ?>
+    </nav>
+  <?php endif; ?>
+
+  <!-- Site Overlay for pushy -->
+  <div class="site-overlay"></div>
+
   <header
       id="header"
-      class="row">
+      class="row push">
+
+    <?php if($page["off_canvas_menu"]): ?>
+      <!-- Menu Button -->
+      <div id="pushy-btn" class="menu-btn"><span class="menu-icon">&nbsp;</span></div>
+    <?php endif; ?>
+
     <?php print $site_title;?>
+
     <?php print render($page['header']); ?>
   </header>
   <!-- /header -->
 
-  <div id="center" class="row">
+  <?php if($page['top']): ?>
+    <div id="top" class="row">
+    <div class="columns large-12">
+        <?php print render($page['top']); ?>
+      </div>
+    </div>
+  <?php endif; ?>
+  <!-- // top -->
 
-    <div
-      id="leftsidebar"
-      class="columns large-3 skrollable skrollable-before"
-      data-top-bottom="margin-top:0px"
-      data-top="margin-top:0px"
-      data-anchor-target="#root"
-      data-smooth-scrolling="off">
+  <div id="center" class="row push">
+
+    <div  id="leftsidebar" class="columns large-3">
       <?php print render($page['sidebar_first']); ?>
     </div>
 
@@ -119,12 +139,7 @@
           </section>
 
         <section
-          id="rightsidebar"
-          class="columns large-3 skrollable skrollable-before"
-          data-top-bottom="margin-top:0px"
-          data-top="margin-top:0px"
-          data-anchor-target="#root"
-          data-smooth-scrolling="off">
+          id="rightsidebar" class="columns large-3">
           <?php print render($page['sidebar_second']) ?>
         </section>
 
@@ -132,7 +147,7 @@
     </main><!-- /main -->
   </div><!-- /center -->
 
-  <footer id="footer">
+  <footer id="footer" class="push">
     <div class="row">
     <?php print render($page['footer']); ?>
     </div>

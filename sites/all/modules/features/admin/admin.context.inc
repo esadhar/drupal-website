@@ -29,7 +29,7 @@ function admin_context_default_contexts() {
         'system-main-menu' => array(
           'module' => 'system',
           'delta' => 'main-menu',
-          'region' => 'content_top',
+          'region' => 'top',
           'weight' => '-10',
         ),
       ),

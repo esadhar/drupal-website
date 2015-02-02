@@ -230,5 +230,5 @@ features_exclude[dependencies][image] = image
 features_exclude[dependencies][menu] = menu
 features_exclude[dependencies][imce] = imce
 features_exclude[dependencies][views] = views
-mtime = 1422627465
+mtime = 1422645302
 project path = sites/all/modules/features

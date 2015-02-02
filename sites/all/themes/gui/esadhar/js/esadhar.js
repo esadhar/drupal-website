@@ -28,41 +28,39 @@ jQuery(document).ready(function($) {
 
   // var $root = $("#root");
   // var rootHeight = ($root.height() && $root.offsetHeight() || 0);
-  var body = document.body;
-  var html = document.documentElement;
+  // setTimeout(function(){
+    if (!$('body').is('.breakpoint-small')){
 
-  var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
-  // console.log('height', height);
-  var ran, min, max;
+      var body = document.body;
+      var html = document.documentElement;
 
-  $('#leftsidebar, #rightsidebar').each(function(i, e){
-    // console.log("e", e);
-    // console.log('i', i);
-    min = !i ? 5 : 7;
-    max = !i ? 7 : 9;
+      var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+      // console.log('height', height);
+      var ran, min, max;
 
-    // switch (i) {
-    //   case 0:
-    //     min = 3;
-    //     max = 5;
-    //     break;
-    //   case 1:
-    //     min = 5;
-    //     max = 7;
-    //     break;
-    //   case 2:
-    //     min = 7;
-    //     max = 9;
-    //     break;
-    // }
-    // console.log('min = '+min+" | max = "+max);
+      $('#leftsidebar, #rightsidebar').each(function(i, e){
 
-    ran = (Math.random()*(max-min+1)+min)/10;
-    // console.log("ran", ran);
-    $(e).attr('data-top-bottom', 'margin-top:'+(height * ran)+'px');
-  });
+        min = !i ? 5 : 7;
+        max = !i ? 7 : 9;
+        ran = (Math.random()*(max-min+1)+min)/10;
+        $(e)
+          .attr('data-top-bottom', 'margin-top:'+(height * ran)+'px')
+          .addClass('skrollable skrollable-before')
+          .attr('data-top-bottom', "margin-top:0px")
+          .attr('data-top', "margin-top:0px")
+          .attr('data-anchor-target', "#root")
+          .attr('data-smooth-scrolling', "off");
+      });
 
+      $('#main-bg')
+        .attr("data-smooth-scrolling", "off")
+        .attr("data-anchor-target", "#root")
+        .attr("data-top-bottom", "width:115%; height:115%; margin-left:-5%; margin-top:-7%;")
+        .attr("data-top","width:100%; height:100%; margin-left:0%; margin-top:0%;");
 
-  var s = skrollr.init();
+      var s = skrollr.init();
+
+    }
+  // }, 100);
 
 });

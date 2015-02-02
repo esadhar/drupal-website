@@ -79,6 +79,7 @@
 	    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
 	  </div>
 
+
         <div id="root">
           <?php print $page_top; ?>
           <?php print $page; ?>
@@ -86,12 +87,7 @@
         </div>
 
         <div id="main-bg-wrapper">
-          <div id="main-bg"
-                  data-smooth-scrolling="off"
-                  data-anchor-target="#root"
-                  data-top="width:100%; height:100%; margin-left:0%; margin-top:0%;"
-                  data-top-bottom="width:115%; height:115%; margin-left:-5%; margin-top:-7%;">
-          </div>
+          <div id="main-bg"></div>
         </div>
 
         <!-- Javascript at the bottom for fast page loading -->
