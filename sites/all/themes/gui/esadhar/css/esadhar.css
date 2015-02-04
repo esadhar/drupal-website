@@ -3771,6 +3771,12 @@ body {
       border-bottom: 1px dashed #1A1A1A; }
       #content #block-system-main p a:hover {
         border-bottom: 1px dashed #000; }
+  #content #block-system-main .node {
+    margin-bottom: 2em; }
+#content ul.links {
+  margin: 0; }
+  #content ul.links li {
+    padding: 0; }
 
 #block-menu-block-1, #block-fieldblock-node-page-default-field-documents, #block-fieldblock-node-actualitee-default-field-documents {
   background-color: #fff;
