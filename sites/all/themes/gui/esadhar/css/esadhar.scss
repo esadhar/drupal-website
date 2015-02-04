@@ -408,9 +408,12 @@ $pushy-width:300px;
     a{color:#000;}
   }
   #block-system-main{
-    background-color:#fff;
-    padding:1em;
     margin:0 0 1em 0;
+    >.content>*{
+      padding:1em;
+      background-color:#fff;
+    }
+
     h3{
       font-size:1.2em;
     }
@@ -429,8 +432,8 @@ $pushy-width:300px;
     }
 
     .node{
-      margin-bottom: 2em;
-    }
+      margin-bottom: 1em;
+      padding-bottom: 1em;}
   }
   ul.links{
     margin:0;

@@ -3758,9 +3758,10 @@ body {
   #content h2.page-title a, #content h2.node-title a {
     color: #000; }
 #content #block-system-main {
-  background-color: #fff;
-  padding: 1em;
   margin: 0 0 1em 0; }
+  #content #block-system-main > .content > * {
+    padding: 1em;
+    background-color: #fff; }
   #content #block-system-main h3 {
     font-size: 1.2em; }
   #content #block-system-main p {
@@ -3772,7 +3773,8 @@ body {
       #content #block-system-main p a:hover {
         border-bottom: 1px dashed #000; }
   #content #block-system-main .node {
-    margin-bottom: 2em; }
+    margin-bottom: 1em;
+    padding-bottom: 1em; }
 #content ul.links {
   margin: 0; }
   #content ul.links li {
