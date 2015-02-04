@@ -3675,6 +3675,8 @@ body {
     #block-system-main-menu > .content > ul > li > ul {
       display: none; } }
 @media only screen and (min-width: 64.063em) {
+  .front #block-system-main-menu {
+    max-width: 60em; }
   #block-system-main-menu > .content > ul > li > a {
     font-size: 1.7em; }
   #block-system-main-menu > .content > ul > li > ul > li > a {

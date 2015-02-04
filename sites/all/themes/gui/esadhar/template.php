@@ -18,7 +18,7 @@ function esadhar_theme() {
   );
 
   # Include the theme settings.
-  include($path .'/inc/template.theme-settings.inc');
+//  include($path .'/inc/template.theme-settings.inc');
 }
 
 /**
@@ -33,17 +33,17 @@ function esadhar_theme() {
  *   The name of the template being rendered.
  */
 function esadhar_preprocess(&$vars, $hook) {
-	global $theme, $theme_info, $user, $language;
+  global $theme, $theme_info, $user, $language;
 
   $vars['is_admin'] = in_array('admin', $user->roles);
   $vars['logged_in'] = ($user->uid > 0) ? TRUE : FALSE;
   $vars['theme_path'] = base_path() . path_to_theme() .'/';
 
-	// $vars['classes_array'][] = $hook.' '.$hook.'-'.$vars['zebra'];
+  // $vars['classes_array'][] = $hook.' '.$hook.'-'.$vars['zebra'];
 
   # Include preprocess functions if and when required.
-	$path = drupal_get_path('theme', 'esadhar');
-	$file = $path .'/preprocess/'. str_replace('_', '-', $hook) .'.pre.php';
+  $path = drupal_get_path('theme', 'esadhar');
+  $file = $path .'/preprocess/'. str_replace('_', '-', $hook) .'.pre.php';
   if (is_file($file)) {
     include($file);
   }
