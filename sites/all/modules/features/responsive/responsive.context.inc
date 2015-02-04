@@ -121,15 +121,21 @@ function responsive_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
+        'fieldblock-f0d86712ed20c5e263c1d286ef6252c4' => array(
+          'module' => 'fieldblock',
+          'delta' => 'f0d86712ed20c5e263c1d286ef6252c4',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
         'menu_block-1' => array(
           'module' => 'menu_block',
           'delta' => '1',
           'region' => 'sidebar_second',
           'weight' => '-8',
         ),
-        'fieldblock-f0d86712ed20c5e263c1d286ef6252c4' => array(
+        'fieldblock-55852e4c0edd6767071229571be40c0b' => array(
           'module' => 'fieldblock',
-          'delta' => 'f0d86712ed20c5e263c1d286ef6252c4',
+          'delta' => '55852e4c0edd6767071229571be40c0b',
           'region' => 'sidebar_second',
           'weight' => '-9',
         ),
@@ -205,15 +211,21 @@ function responsive_context_default_contexts() {
           'region' => 'content_top',
           'weight' => '-10',
         ),
+        'fieldblock-f0d86712ed20c5e263c1d286ef6252c4' => array(
+          'module' => 'fieldblock',
+          'delta' => 'f0d86712ed20c5e263c1d286ef6252c4',
+          'region' => 'content_bottom',
+          'weight' => '-1',
+        ),
         'menu-menu-menu-gauche' => array(
           'module' => 'menu',
           'delta' => 'menu-menu-gauche',
           'region' => 'content_bottom',
           'weight' => '0',
         ),
-        'fieldblock-f0d86712ed20c5e263c1d286ef6252c4' => array(
+        'fieldblock-55852e4c0edd6767071229571be40c0b' => array(
           'module' => 'fieldblock',
-          'delta' => 'f0d86712ed20c5e263c1d286ef6252c4',
+          'delta' => '55852e4c0edd6767071229571be40c0b',
           'region' => 'content_bottom',
           'weight' => '-1',
         ),

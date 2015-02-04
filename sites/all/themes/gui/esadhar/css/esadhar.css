@@ -3769,36 +3769,36 @@ body {
       #content #block-system-main p a:hover {
         border-bottom: 1px dashed #000; }
 
-#block-menu-block-1, #block-fieldblock-node-page-default-field-documents {
+#block-menu-block-1, #block-fieldblock-node-page-default-field-documents, #block-fieldblock-node-actualitee-default-field-documents {
   background-color: #fff;
   padding: 1em;
   overflow: hidden;
   margin: 0 0 1em 0; }
-  #block-menu-block-1 > h2, #block-fieldblock-node-page-default-field-documents > h2 {
+  #block-menu-block-1 > h2, #block-fieldblock-node-page-default-field-documents > h2, #block-fieldblock-node-actualitee-default-field-documents > h2 {
     font-size: 1.134em;
     font-weight: bold;
     text-transform: lowercase; }
-  #block-menu-block-1 ul, #block-fieldblock-node-page-default-field-documents ul {
+  #block-menu-block-1 ul, #block-fieldblock-node-page-default-field-documents ul, #block-fieldblock-node-actualitee-default-field-documents ul {
     padding: 0;
     margin: 0; }
-    #block-menu-block-1 ul:hover > li:not(:hover) a, .not-front #block-menu-block-1 ul li:not(.active-trail):not(:hover) a, #block-fieldblock-node-page-default-field-documents ul:hover > li:not(:hover) a, .not-front #block-fieldblock-node-page-default-field-documents ul li:not(.active-trail):not(:hover) a {
+    #block-menu-block-1 ul:hover > li:not(:hover) a, .not-front #block-menu-block-1 ul li:not(.active-trail):not(:hover) a, #block-fieldblock-node-page-default-field-documents ul:hover > li:not(:hover) a, .not-front #block-fieldblock-node-page-default-field-documents ul li:not(.active-trail):not(:hover) a, #block-fieldblock-node-actualitee-default-field-documents ul:hover > li:not(:hover) a, .not-front #block-fieldblock-node-actualitee-default-field-documents ul li:not(.active-trail):not(:hover) a {
       opacity: 0.6; }
-    #block-menu-block-1 ul ul, #block-fieldblock-node-page-default-field-documents ul ul {
+    #block-menu-block-1 ul ul, #block-fieldblock-node-page-default-field-documents ul ul, #block-fieldblock-node-actualitee-default-field-documents ul ul {
       padding: 0 0 0.5em 0.5em; }
-  #block-menu-block-1 li.leaf, #block-fieldblock-node-page-default-field-documents li.leaf {
+  #block-menu-block-1 li.leaf, #block-fieldblock-node-page-default-field-documents li.leaf, #block-fieldblock-node-actualitee-default-field-documents li.leaf {
     list-style: none;
     padding: 0;
     margin: 0;
     line-height: 1.2; }
-    #block-menu-block-1 li.leaf.active, #block-fieldblock-node-page-default-field-documents li.leaf.active {
+    #block-menu-block-1 li.leaf.active, #block-fieldblock-node-page-default-field-documents li.leaf.active, #block-fieldblock-node-actualitee-default-field-documents li.leaf.active {
       font-weight: bold; }
-  #block-menu-block-1 a, #block-fieldblock-node-page-default-field-documents a {
+  #block-menu-block-1 a, #block-fieldblock-node-page-default-field-documents a, #block-fieldblock-node-actualitee-default-field-documents a {
     font-size: 0.756em;
     color: #000;
     line-height: 0.8; }
-    #block-menu-block-1 a:hover, #block-fieldblock-node-page-default-field-documents a:hover {
+    #block-menu-block-1 a:hover, #block-fieldblock-node-page-default-field-documents a:hover, #block-fieldblock-node-actualitee-default-field-documents a:hover {
       border-bottom: 1px dashed #000; }
-  #block-menu-block-1 .file-icon, #block-fieldblock-node-page-default-field-documents .file-icon {
+  #block-menu-block-1 .file-icon, #block-fieldblock-node-page-default-field-documents .file-icon, #block-fieldblock-node-actualitee-default-field-documents .file-icon {
     display: none; }
 
 #footer {

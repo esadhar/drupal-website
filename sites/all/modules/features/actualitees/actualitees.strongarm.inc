@@ -138,6 +138,9 @@ function actualitees_strongarm() {
         'redirect' => array(
           'weight' => '3',
         ),
+        'workflow' => array(
+          'weight' => '99',
+        ),
       ),
       'display' => array(
         'workflow_current_state' => array(
