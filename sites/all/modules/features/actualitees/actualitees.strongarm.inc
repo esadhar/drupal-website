@@ -111,6 +111,15 @@ function actualitees_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'fieldblock-node-actualitee-default';
+  $strongarm->value = array(
+    'field_documents' => 'Documents',
+  );
+  $export['fieldblock-node-actualitee-default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__actualitee';
   $strongarm->value = array(
     'view_modes' => array(
@@ -278,6 +287,15 @@ function actualitees_strongarm() {
     2 => 'delete_roles',
   );
   $export['user_permissions_actualitee'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workflow_actualitee';
+  $strongarm->value = array(
+    0 => 'node',
+  );
+  $export['workflow_actualitee'] = $strongarm;
 
   return $export;
 }
