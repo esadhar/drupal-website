@@ -44,5 +44,5 @@ features[variable][] = pathauto_node_actualitee_pattern
 features[variable][] = save_continue_actualitee
 features[variable][] = user_permissions_actualitee
 features_exclude[dependencies][page] = page
-mtime = 1421850967
+mtime = 1422645444
 project path = sites/all/modules/features

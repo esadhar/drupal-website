@@ -63,12 +63,8 @@ function actualitees_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -83,9 +79,8 @@ function actualitees_field_default_field_instances() {
     'label' => 'Visuel',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
-      'entity_translation_sync' => FALSE,
       'file_directory' => 'visuels',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -98,16 +93,25 @@ function actualitees_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'insert' => 0,
+        'insert' => 1,
         'insert_absolute' => 0,
         'insert_class' => '',
-        'insert_default' => 'auto',
+        'insert_default' => 'image_large',
         'insert_styles' => array(
           'auto' => 0,
           'icon_link' => 0,
           'image' => 0,
+          'image_background' => 0,
           'image_large' => 'image_large',
+          'image_linkit_thumb' => 0,
           'image_medium' => 0,
+          'image_resp_backgroundbreakpoints_theme_esadhar_large_1x' => 0,
+          'image_resp_backgroundbreakpoints_theme_esadhar_medium_1x' => 0,
+          'image_resp_backgroundbreakpoints_theme_esadhar_small_1x' => 0,
+          'image_resp_backgroundbreakpoints_theme_esadhar_xlarge_1x' => 0,
+          'image_resp_backgroundbreakpoints_theme_esadhar_xxlarge_1x' => 0,
+          'image_resp_img__esadhar' => 0,
+          'image_square_thumb' => 0,
           'image_thumbnail' => 0,
           'link' => 0,
         ),

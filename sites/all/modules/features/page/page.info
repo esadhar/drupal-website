@@ -54,5 +54,5 @@ features[variable][] = node_options_page
 features[variable][] = node_preview_page
 features[variable][] = node_submitted_page
 features[variable][] = nodeformscols_field_placements_page_default
-mtime = 1422646029
+mtime = 1422917054
 project path = sites/all/modules/features
