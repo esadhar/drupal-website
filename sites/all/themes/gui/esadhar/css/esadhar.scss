@@ -419,7 +419,7 @@ $pushy-width:300px;
   #block-system-main{
     margin:0 0 1em 0;
     >.content>*{
-      padding:1em 1.8em 1em;
+      padding:1.8em;
       background-color:#fff;
       .front &{
         padding-top:0;
@@ -482,6 +482,12 @@ $pushy-width:300px;
       font-weight: bold;
     }
   }
+
+  ul li.expanded{
+    list-style: none;
+    list-style-image: none;
+  }
+
   a{
     font-size: 0.756em;
     color:#000;
