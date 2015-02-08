@@ -128,7 +128,7 @@ function page_field_default_field_instances() {
             'bg_image_attachment' => 'scroll',
             'bg_image_background_size' => 'cover',
             'bg_image_background_size_ie8' => 1,
-            'bg_image_color' => '#FFFFFF',
+            'bg_image_color' => '#E6E6E6',
             'bg_image_important' => 1,
             'bg_image_media_query' => 'all',
             'bg_image_repeat' => 'no-repeat',

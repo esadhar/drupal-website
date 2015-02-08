@@ -3635,7 +3635,8 @@ body {
 #block-menu-menu-menu-gauche a {
   color: #FFF;
   display: block;
-  padding: 0.3em 0.4em; }
+  padding: 0.3em 0.4em;
+  font-size: 0.75em; }
 
 #block-system-main-menu ul {
   margin: 0;
