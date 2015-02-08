@@ -3766,8 +3766,10 @@ body {
 #content #block-system-main {
   margin: 0 0 1em 0; }
   #content #block-system-main > .content > * {
-    padding: 0 1.8em 1em;
+    padding: 1em 1.8em 1em;
     background-color: #fff; }
+    .front #content #block-system-main > .content > * {
+      padding-top: 0; }
   #content #block-system-main h3 {
     font-size: 1.2em; }
   #content #block-system-main p {

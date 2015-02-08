@@ -419,8 +419,11 @@ $pushy-width:300px;
   #block-system-main{
     margin:0 0 1em 0;
     >.content>*{
-      padding:0 1.8em 1em;
+      padding:1em 1.8em 1em;
       background-color:#fff;
+      .front &{
+        padding-top:0;
+      }
     }
 
     h3{
