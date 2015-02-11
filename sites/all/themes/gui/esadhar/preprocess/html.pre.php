@@ -80,11 +80,11 @@ if(isset($vars['node'])){
 
 	# from menu
 	$mlid = db_result(db_query("SELECT mlid FROM {menu_links} WHERE link_path = '%s'", 'node/'. $vars['node']->nid));
-  // Now get the menu related information.
-  if (!empty($mlid) || !empty($node->menu['mlid']) || !empty($node->menu['plid'])) {
-    $menu_link = menu_link_load($mlid);
-		// krumo($menu_link);
-		$vars['classes_array'][] = ' mlid-'. $menu_link['mlid'] .' plid-'. $menu_link['plid'];
+      // Now get the menu related information.
+      if (!empty($mlid) || !empty($node->menu['mlid']) || !empty($node->menu['plid'])) {
+        $menu_link = menu_link_load($mlid);
+        // krumo($menu_link);
+	 $vars['classes_array'][] = ' mlid-'. $menu_link['mlid'] .' plid-'. $menu_link['plid'];
 	}
 }
 
