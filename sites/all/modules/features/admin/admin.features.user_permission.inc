@@ -14,6 +14,7 @@ function admin_user_default_permissions() {
   $permissions['access admin theme'] = array(
     'name' => 'access admin theme',
     'roles' => array(
+      'actu manager' => 'actu manager',
       'administrator' => 'administrator',
       'root' => 'root',
     ),
@@ -24,10 +25,22 @@ function admin_user_default_permissions() {
   $permissions['access administration menu'] = array(
     'name' => 'access administration menu',
     'roles' => array(
+      'actu manager' => 'actu manager',
       'administrator' => 'administrator',
       'root' => 'root',
     ),
     'module' => 'admin_menu',
+  );
+
+  // Exported permission: 'access administration pages'.
+  $permissions['access administration pages'] = array(
+    'name' => 'access administration pages',
+    'roles' => array(
+      'actu manager' => 'actu manager',
+      'administrator' => 'administrator',
+      'root' => 'root',
+    ),
+    'module' => 'system',
   );
 
   // Exported permission: 'access backup and migrate'.
@@ -52,6 +65,8 @@ function admin_user_default_permissions() {
   $permissions['access content'] = array(
     'name' => 'access content',
     'roles' => array(
+      'actu manager' => 'actu manager',
+      'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
       'root' => 'root',
@@ -72,7 +87,6 @@ function admin_user_default_permissions() {
   $permissions['administer background image'] = array(
     'name' => 'administer background image',
     'roles' => array(
-      'administrator' => 'administrator',
       'root' => 'root',
     ),
     'module' => 'bg_image',
@@ -394,6 +408,7 @@ function admin_user_default_permissions() {
   $permissions['participate in workflow'] = array(
     'name' => 'participate in workflow',
     'roles' => array(
+      'actu manager' => 'actu manager',
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
@@ -465,6 +480,39 @@ function admin_user_default_permissions() {
     'module' => 'bg_image',
   );
 
+  // Exported permission: 'view any unpublished actualitee content'.
+  $permissions['view any unpublished actualitee content'] = array(
+    'name' => 'view any unpublished actualitee content',
+    'roles' => array(
+      'actu manager' => 'actu manager',
+      'administrator' => 'administrator',
+      'root' => 'root',
+    ),
+    'module' => 'view_unpublished',
+  );
+
+  // Exported permission: 'view any unpublished content'.
+  $permissions['view any unpublished content'] = array(
+    'name' => 'view any unpublished content',
+    'roles' => array(
+      'actu manager' => 'actu manager',
+      'administrator' => 'administrator',
+      'root' => 'root',
+    ),
+    'module' => 'view_unpublished',
+  );
+
+  // Exported permission: 'view any unpublished page content'.
+  $permissions['view any unpublished page content'] = array(
+    'name' => 'view any unpublished page content',
+    'roles' => array(
+      'actu manager' => 'actu manager',
+      'administrator' => 'administrator',
+      'root' => 'root',
+    ),
+    'module' => 'view_unpublished',
+  );
+
   // Exported permission: 'view own unpublished content'.
   $permissions['view own unpublished content'] = array(
     'name' => 'view own unpublished content',
@@ -481,6 +529,17 @@ function admin_user_default_permissions() {
       'root' => 'root',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'view the administration theme'.
+  $permissions['view the administration theme'] = array(
+    'name' => 'view the administration theme',
+    'roles' => array(
+      'actu manager' => 'actu manager',
+      'administrator' => 'administrator',
+      'root' => 'root',
+    ),
+    'module' => 'system',
   );
 
   return $permissions;

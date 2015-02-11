@@ -53,5 +53,5 @@ features[variable][] = save_continue_actualitee
 features[variable][] = user_permissions_actualitee
 features[variable][] = workflow_actualitee
 features_exclude[dependencies][page] = page
-mtime = 1423072642
+mtime = 1423072823
 project path = sites/all/modules/features

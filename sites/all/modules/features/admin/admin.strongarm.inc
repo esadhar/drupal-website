@@ -57,6 +57,29 @@ function admin_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'admin_menu_source_settings';
+  $strongarm->value = array(
+    1 => array(
+      'source' => '',
+    ),
+    2 => array(
+      'source' => 'navigation',
+    ),
+    5 => array(
+      'source' => 'navigation',
+    ),
+    3 => array(
+      'source' => 'navigation',
+    ),
+    4 => array(
+      'source' => '',
+    ),
+  );
+  $export['admin_menu_source_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'admin_menu_tweak_modules';
   $strongarm->value = 0;
   $export['admin_menu_tweak_modules'] = $strongarm;

@@ -14,6 +14,7 @@ function actualitees_user_default_permissions() {
   $permissions['create actualitee content'] = array(
     'name' => 'create actualitee content',
     'roles' => array(
+      'actu manager' => 'actu manager',
       'administrator' => 'administrator',
       'root' => 'root',
     ),
@@ -24,6 +25,7 @@ function actualitees_user_default_permissions() {
   $permissions['delete any actualitee content'] = array(
     'name' => 'delete any actualitee content',
     'roles' => array(
+      'actu manager' => 'actu manager',
       'administrator' => 'administrator',
       'root' => 'root',
     ),
@@ -34,6 +36,7 @@ function actualitees_user_default_permissions() {
   $permissions['delete own actualitee content'] = array(
     'name' => 'delete own actualitee content',
     'roles' => array(
+      'actu manager' => 'actu manager',
       'administrator' => 'administrator',
       'root' => 'root',
     ),
@@ -44,6 +47,7 @@ function actualitees_user_default_permissions() {
   $permissions['edit any actualitee content'] = array(
     'name' => 'edit any actualitee content',
     'roles' => array(
+      'actu manager' => 'actu manager',
       'administrator' => 'administrator',
       'root' => 'root',
     ),
@@ -54,6 +58,7 @@ function actualitees_user_default_permissions() {
   $permissions['edit own actualitee content'] = array(
     'name' => 'edit own actualitee content',
     'roles' => array(
+      'actu manager' => 'actu manager',
       'administrator' => 'administrator',
       'root' => 'root',
     ),

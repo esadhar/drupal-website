@@ -10,10 +10,16 @@
 function admin_user_default_roles() {
   $roles = array();
 
+  // Exported role: actu manager.
+  $roles['actu manager'] = array(
+    'name' => 'actu manager',
+    'weight' => 2,
+  );
+
   // Exported role: administrator.
   $roles['administrator'] = array(
     'name' => 'administrator',
-    'weight' => 2,
+    'weight' => 3,
   );
 
   // Exported role: anonymous user.
@@ -31,7 +37,7 @@ function admin_user_default_roles() {
   // Exported role: root.
   $roles['root'] = array(
     'name' => 'root',
-    'weight' => 3,
+    'weight' => 4,
   );
 
   return $roles;
