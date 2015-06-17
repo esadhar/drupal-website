@@ -58,7 +58,9 @@ jQuery(document).ready(function($) {
         .attr("data-top-bottom", "width:115%; height:115%; margin-left:-5%; margin-top:-7%;")
         .attr("data-top","width:100%; height:100%; margin-left:0%; margin-top:0%;");
 
-      var s = skrollr.init();
+      var s = skrollr.init({
+        skrollrBody:"root"
+      });
 
     }
   // }, 100);
