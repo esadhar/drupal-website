@@ -55,13 +55,15 @@ plugins[panels][layouts] = layouts
 breakpoints[Small] = only screen and (max-width: 640px)
 ; max-width 640px, mobile-only styles, use when QAing mobile issues
 
-breakpoints[Medium] = only screen and (min-width: 641px)
+breakpoints[Medium] = only screen and (min-width: 641px) and (max-width: 1024px)
+breakpoints[Medium-up] = only screen and (min-width: 641px)
 ; min-width 641px, medium screens
 
-breakpoints[Large] = only screen and (min-width: 1025px)
+breakpoints[Large] = only screen and (min-width: 1025px) and (max-width: 1440px)
+breakpoints[Large-up] = only screen and (min-width: 1025px)
 ; min-width 1025px, large screens
 
-breakpoints[XLarge] = only screen and (min-width: 1441px)
+breakpoints[XLarge] = only screen and (min-width: 1441px) and (max-width: 1920px)
 ; min-width 1441px, xlarge screens
 
 breakpoints[XXLarge] = only screen and (min-width: 1921px)

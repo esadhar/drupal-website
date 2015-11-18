@@ -3583,7 +3583,7 @@ body {
       padding: 0 0 0 0.5em; }
       #block-menu-menu-header-menu > .content > ul.menu > li > ul a {
         font-size: 1em; } }
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 40.063em) {
   #block-menu-menu-header-menu ul li {
     display: inline-block;
     vertical-align: top; }
@@ -3675,7 +3675,7 @@ body {
       letter-spacing: -0.06em; }
     #block-system-main-menu > .content > ul > li > ul {
       display: none; } }
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 40.063em) {
   .front #block-system-main-menu {
     max-width: 60em; }
   #block-system-main-menu > .content > ul > li > a {
